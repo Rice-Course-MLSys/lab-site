@@ -11,7 +11,7 @@ header:
   overlay_image: /assets/images/banner.webp
   actions:
     - label: "Learn More"
-      url: "/research/"
+      url: "/home/#research-areas"
   caption: "Photo credit: OpenAI-Sora"
 excerpt: "Welcome to Yuke's Lab at Rice University - Advancing Machine Learning and Systems Research"
 intro: 
@@ -67,7 +67,7 @@ feature_row:
 
 {% include feature_row id="intro" type="center" %}
 
-## Research Areas
+## Research Areas {#research-areas}
 
 {% include feature_row %}
 
