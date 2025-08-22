@@ -9,7 +9,7 @@ header:
   overlay_filter: "0.6"
   overlay_image: /assets/images/people-banner.webp
   caption: "Photo credit: OpenAI-Sora"
-excerpt: "Meet the brilliant minds driving innovation in machine learning and systems research"
+excerpt: "Meet our dedicated team of researchers, students, and collaborators driving innovation in machine learning and systems research."
 
 # Lab members organized by role
 faculty:
@@ -24,7 +24,7 @@ faculty:
 phd_students:
   - name: "Fanjiang Ye"
     title: "PhD Student"
-    image: "/assets/images/people/fanjiang-ye.jpeg"
+    image: "/assets/images/people/fanjiang-ye.png"
     research_interests: "Research interests to be updated..."
     website: "https://home.fanjiang.net"
     email: "fanjye@iu.edu"
@@ -52,6 +52,36 @@ master_students:
     website: "#"
     linkedin: "https://www.linkedin.com/in/xinrui-zhong-519b2a327"
     email: "xz118@rice.edu"
+    placeholder: true
+
+interns:
+  - name: "Yi Mu"
+    title: "Intern"
+    image: "/assets/images/people/default.webp"
+    research_interests: "Research interests to be updated..."
+    website: "#"
+    email: "#"
+    placeholder: true
+  - name: "Zepeng Zhao"
+    title: "Intern"
+    image: "/assets/images/people/default.webp"
+    research_interests: "Research interests to be updated..."
+    website: "#"
+    email: "#"
+    placeholder: true
+  - name: "Xinze Feng"
+    title: "Intern"
+    image: "/assets/images/people/default.webp"
+    research_interests: "Research interests to be updated..."
+    website: "#"
+    email: "#"
+    placeholder: true
+  - name: "Juncheng (Jack) Shen"
+    title: "Intern"
+    image: "/assets/images/people/default.webp"
+    research_interests: "Research interests to be updated..."
+    website: "#"
+    email: "#"
     placeholder: true
 
 alumni:
@@ -92,32 +122,22 @@ join_cta:
 
 <div class="people-grid">
     {% for person in page.faculty %}
-    <div class="person-card">
+    <div class="person-item">
       <div class="person-photo">
         <img src="{{ person.image | relative_url }}" alt="{{ person.name }}" class="person-image">
       </div>
       <div class="person-info">
         <h3 class="person-name">{{ person.name }}</h3>
         <p class="person-title">{{ person.title }}</p>
-        <div class="person-research">
-          <h4>Research Interests:</h4>
-          <p>{{ person.research_interests }}</p>
-        </div>
         <div class="person-links">
           {% if person.website and person.website != "#" %}
-          <a href="{{ person.website }}" class="person-link" target="_blank">
-            <i class="fas fa-home"></i> Website
-          </a>
+          <a href="{{ person.website }}" target="_blank">Website</a>
           {% endif %}
           {% if person.email %}
-          <a href="mailto:{{ person.email }}" class="person-link">
-            <i class="fas fa-envelope"></i> Email
-          </a>
+          <a href="mailto:{{ person.email }}">Email</a>
           {% endif %}
           {% if person.linkedin and person.linkedin != "#" %}
-          <a href="{{ person.linkedin }}" class="person-link" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
+          <a href="{{ person.linkedin }}" target="_blank">LinkedIn</a>
           {% endif %}
         </div>
       </div>
@@ -129,33 +149,21 @@ join_cta:
 
 <div class="people-grid">
     {% for person in page.phd_students %}
-    <div class="person-card">
+    <div class="person-item">
       <div class="person-photo">
         <img src="{{ person.image | relative_url }}" alt="{{ person.name }}" class="person-image">
       </div>
       <div class="person-info">
         <h3 class="person-name">{{ person.name }}</h3>
         <p class="person-title">{{ person.title }}</p>
-        <div class="person-research">
-          <h4>Research Interests:</h4>
-          <p class="{% if person.placeholder %}research-placeholder{% endif %}">
-            {% if person.placeholder %}<em>{{ person.research_interests }}</em>{% else %}{{ person.research_interests }}{% endif %}
-          </p>
-        </div>
         <div class="person-links">
           {% if person.website and person.website != "#" %}
-          <a href="{{ person.website }}" class="person-link" target="_blank">
-            <i class="fas fa-home"></i> Website
-          </a>
+          <a href="{{ person.website }}" target="_blank">Website</a>
           {% else %}
-          <a href="#" class="person-link disabled">
-            <i class="fas fa-home"></i> Website (TBA)
-          </a>
+          <!-- <span class="disabled">Website (TBA)</span> -->
           {% endif %}
           {% if person.email %}
-          <a href="mailto:{{ person.email }}" class="person-link">
-            <i class="fas fa-envelope"></i> Email
-          </a>
+          <a href="mailto:{{ person.email }}">Email</a>
           {% endif %}
         </div>
       </div>
@@ -167,28 +175,47 @@ join_cta:
 
 <div class="people-grid">
     {% for person in page.master_students %}
-    <div class="person-card">
+    <div class="person-item">
       <div class="person-photo">
         <img src="{{ person.image | relative_url }}" alt="{{ person.name }}" class="person-image">
       </div>
       <div class="person-info">
         <h3 class="person-name">{{ person.name }}</h3>
         <p class="person-title">{{ person.title }}</p>
-        <div class="person-research">
-          <h4>Research Interests:</h4>
-          <p class="{% if person.placeholder %}research-placeholder{% endif %}">
-            {% if person.placeholder %}<em>{{ person.research_interests }}</em>{% else %}{{ person.research_interests }}{% endif %}
-          </p>
-        </div>
         <div class="person-links">
           {% if person.website and person.website != "#" %}
-          <a href="{{ person.website }}" class="person-link" target="_blank">
-            <i class="fas fa-home"></i> Website
-          </a>
+          <a href="{{ person.website }}" target="_blank">Website</a>
           {% else %}
-          <a href="#" class="person-link disabled">
-            <i class="fas fa-home"></i> Website (TBA)
-          </a>
+          <!-- <span class="disabled">Website (TBA)</span> -->
+          {% endif %}
+          {% if person.email %}
+          <a href="mailto:{{ person.email }}">Email</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+## Interns
+
+<div class="people-grid">
+    {% for person in page.interns %}
+    <div class="person-item">
+      <div class="person-photo">
+        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}" class="person-image">
+      </div>
+      <div class="person-info">
+        <h3 class="person-name">{{ person.name }}</h3>
+        <p class="person-title">{{ person.title }}</p>
+        <div class="person-links">
+          {% if person.website and person.website != "#" %}
+          <a href="{{ person.website }}" target="_blank">Website</a>
+          {% else %}
+          <!-- <span class="disabled">Website (TBA)</span> -->
+          {% endif %}
+          {% if person.email and person.email != "#" %}
+          <a href="mailto:{{ person.email }}">Email</a>
           {% endif %}
         </div>
       </div>
@@ -201,7 +228,7 @@ join_cta:
 
 <div class="people-grid alumni-grid">
     {% for person in page.alumni %}
-    <div class="person-card alumni-card">
+    <div class="person-item alumni-item">
       <div class="person-photo">
         <img src="{{ person.image | relative_url }}" alt="{{ person.name }}" class="person-image">
       </div>
@@ -213,9 +240,7 @@ join_cta:
         {% endif %}
         <div class="person-links">
           {% if person.website and person.website != "#" %}
-          <a href="{{ person.website }}" class="person-link" target="_blank">
-            <i class="fas fa-home"></i> Website
-          </a>
+          <a href="{{ person.website }}" target="_blank">Website</a>
           {% endif %}
         </div>
       </div>
@@ -224,9 +249,9 @@ join_cta:
   </div>
 {% endif %}
 
-## {{ page.join_cta.title }}
+<!-- ## {{ page.join_cta.title }} -->
 
-<div class="join-section">
+<!-- <div class="join-section">
     <p>{{ page.join_cta.description }}</p>
     <div class="join-buttons">
       {% for button in page.join_cta.buttons %}
@@ -235,159 +260,95 @@ join_cta:
       </a>
       {% endfor %}
     </div>
-  </div>
+  </div> -->
 
 <style>
 .people-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 450px));
-  gap: 2rem;
+  display: flex;
+  gap: 3rem;
   margin: 2rem 0 4rem 0;
-  justify-content: start;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
-.person-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.person-item {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 450px;
-}
-
-.person-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  border-color: #007bff;
+  align-items: center;
+  text-align: center;
+  min-width: 200px;
+  flex-shrink: 0;
 }
 
 .person-photo {
-  text-align: center;
-  margin-bottom: -2rem;
+  margin-bottom: 0.8rem;
 }
 
 .person-image {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #f8f9fa;
+  border: 2px solid #f0f0f0;
   transition: border-color 0.3s ease;
 }
 
-.person-card:hover .person-image {
+.person-image:hover {
   border-color: #007bff;
 }
 
 .person-info {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  align-items: center;
 }
 
 .person-name {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .person-title {
-  font-size: 1rem;
-  color: #007bff;
-  font-weight: 500;
-  margin-bottom: 0em;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .current-position {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: #28a745;
-  font-weight: 500;
-  margin-bottom: 0rem;
-  font-style: italic;
-}
-
-.person-research {
-  text-align: left;
-  margin-bottom: 0rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.person-research h4 {
-  font-size: 1rem;
-  color: #333;
+  font-weight: 400;
   margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-
-.person-research p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #666;
-  flex-grow: 1;
-}
-
-.research-placeholder {
-  color: #999 !important;
+  font-style: italic;
 }
 
 .person-links {
   display: flex;
-  justify-content: center;
   gap: 0.8rem;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: auto;
 }
 
-.person-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 0.8rem;
-  background: #f8f9fa;
-  color: #333;
+.person-links a {
+  color: #007bff;
   text-decoration: none;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-  border: 1px solid #dee2e6;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
 }
 
-.person-link:hover:not(.disabled) {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
-  transform: translateY(-2px);
+.person-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
 
-.person-link.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.alumni-grid .person-card {
-  border-color: #6c757d;
-}
-
-.alumni-card:hover {
-  border-color: #6c757d;
-}
-
-.alumni-card .person-image {
-  border-color: #e9ecef;
-}
-
-.alumni-card:hover .person-image {
-  border-color: #6c757d;
+.person-links .disabled {
+  color: #999;
+  font-size: 0.8rem;
 }
 
 .join-section {
@@ -423,21 +384,16 @@ join_cta:
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .people-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
   }
   
-  .person-card {
-    padding: 1rem;
+  .person-item {
+    min-width: 150px;
   }
   
   .person-image {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .person-name {
-    font-size: 1.2rem;
+    width: 80px;
+    height: 80px;
   }
   
   .join-buttons {
@@ -452,15 +408,14 @@ join_cta:
 }
 
 @media (max-width: 480px) {  
+  .people-grid {
+    gap: 1.5rem;
+  }
+  
   .person-links {
     flex-direction: column;
     align-items: center;
-  }
-  
-  .person-link {
-    width: 100%;
-    max-width: 200px;
-    justify-content: center;
+    gap: 0.4rem;
   }
 }
 </style>

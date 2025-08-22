@@ -71,22 +71,13 @@ Our research benefits from strong partnerships with top-tier academic institutio
 .sponsor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 2rem 0;
 }
 
 .sponsor-item {
   text-align: center;
   padding: 1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sponsor-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .sponsor-logo {
@@ -94,11 +85,18 @@ Our research benefits from strong partnerships with top-tier academic institutio
   max-height: 60px;
   margin-bottom: 0.8rem;
   object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  opacity: 0.8;
 }
 
 .sponsor-item h3 {
   margin: 1rem 0 0.5rem 0;
   color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .sponsor-item p {
