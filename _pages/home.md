@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: single
 permalink: /home/
 author_profile: true
 redirect_from:
@@ -21,7 +21,7 @@ feature_row:
     alt: "Efficient"
     title: "Efficient"
     excerpt: "We explore advanced techniques for optimizing machine learning models, focusing on reducing computational costs and improving performance."
-    url: "/publications/"
+    url: "/publications/#efficient"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
@@ -29,7 +29,7 @@ feature_row:
     alt: "Scalable"
     title: "Scalable"
     excerpt: "We develop scalable machine learning systems that can handle large datasets and complex models, ensuring robust performance in real-world applications."
-    url: "/publications/"
+    url: "/publications/#scalable"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
@@ -37,7 +37,7 @@ feature_row:
     alt: "Secure"
     title: "Secure"
     excerpt: "We focus on building secure machine learning algorithms and systems that protect user data and ensure trustworthiness in AI applications."
-    url: "/publications/"
+    url: "/publications/#secure"
     btn_label: "Read More"
     btn_class: "btn--primary"
 # feature_row2:
