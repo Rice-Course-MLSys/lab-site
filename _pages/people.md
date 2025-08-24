@@ -57,7 +57,7 @@ master_students:
 interns:
   - name: "Yi Mu"
     title: "Intern"
-    image: "/assets/images/people/default.webp"
+    image: "/assets/images/people/yi-mu.jpg"
     research_interests: "Research interests to be updated..."
     website: "#"
     email: "#"
@@ -71,14 +71,14 @@ interns:
     placeholder: true
   - name: "Xinze Feng"
     title: "Intern"
-    image: "/assets/images/people/default.webp"
+    image: "/assets/images/people/xinze-feng.jpg"
     research_interests: "Research interests to be updated..."
     website: "#"
     email: "#"
     placeholder: true
   - name: "Juncheng (Jack) Shen"
     title: "Intern"
-    image: "/assets/images/people/default.webp"
+    image: "/assets/images/people/jucheng-shen.jpg"
     research_interests: "Research interests to be updated..."
     website: "#"
     email: "#"
